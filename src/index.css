@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0D2B45;
+  --color-navy-mid: #163D5E;
+  --color-navy-light: #1E5278;
+  --color-green-brand: #00A86B;
+  --color-green-dark: #007A4D;
+  --color-green-light: #00D68A;
+  --color-green-pale: #E6F9F2;
+  --color-amber-brand: #F59E0B;
+  --color-amber-dark: #D97706;
+  --color-off-white: #F8FAFE;
+  --color-light-gray: #EEF2F7;
+  --color-mid-gray: #6B7E94;
+  --color-dark: #0A1929;
+  --color-border-color: #D1DCE8;
+
+  --font-fraunces: 'Fraunces', serif;
+  --font-dm-sans: 'DM Sans', sans-serif;
+}
+
+body {
+  background-color: var(--color-off-white);
+  color: var(--color-dark);
+  font-family: var(--font-dm-sans);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+@keyframes pulse-btn {
+  0%, 100% { box-shadow: 0 6px 28px rgba(0,168,107,0.5); }
+  50% { box-shadow: 0 8px 40px rgba(0,168,107,0.8); }
+}
+
+.animate-pulse-btn {
+  animation: pulse-btn 2.5s ease-in-out infinite;
+}
+
+.animate-pulse-btn:hover {
+  animation: none;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease both;
+}
+
+.animate-fade-up-delay {
+  animation: fadeUp 0.7s 0.2s ease both;
+}
